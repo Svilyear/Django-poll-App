@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Vitronics Technologies{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Vitronics Technologies</a></h1>
+{% endblock %}
+
+{% block nav-global %}
+    <nav class="custom-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin:index' %}">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Custom_admin_page.html/">
+                    <i class="fas fa-link"></i> Custom Page
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://vitronicsstore.elands.co.ke">
+                    <i class="fas fa-external-link-alt"></i> Vitronics store
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <style>
+        .custom-nav ul {
+            list-style-type: none;
+            color: green;
+            padding: 0;
+        }
+        .custom-nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .custom-nav ul li a {
+            text-decoration: none;
+            color: red;
+        }
+        .custom-nav ul li a:hover {
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}
